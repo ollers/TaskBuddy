@@ -95,18 +95,18 @@ add_action( 'after_setup_theme', 'taskbuddy_content_width', 0 );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function taskbuddy_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'taskbuddy' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-}
-add_action( 'widgets_init', 'taskbuddy_widgets_init' );
+// function taskbuddy_widgets_init() {
+// 	register_sidebar( array(
+// 		'name'          => esc_html__( 'Sidebar', 'taskbuddy' ),
+// 		'id'            => 'sidebar-1',
+// 		'description'   => '',
+// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+// 		'after_widget'  => '</aside>',
+// 		'before_title'  => '<h1 class="widget-title">',
+// 		'after_title'   => '</h1>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'taskbuddy_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -123,6 +123,9 @@ function taskbuddy_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'taskbuddy_scripts' );
+
+
+
 
 /**
  * Implement the Custom Header feature.
